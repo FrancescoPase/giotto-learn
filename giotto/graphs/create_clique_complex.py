@@ -220,7 +220,7 @@ class CreateBoundaryMatrices(BaseEstimator, TransformerMixin):
 
         for order, order_inc in incidence.items():
             if isinstance(self.orders_, int):
-                orders = [self.orders_]
+                self.orders = [self.orders_]
             if order in self.orders_:
                 # This is the boundary matrix from order to order-1 simplexes
                 temp_mat = lil_matrix(

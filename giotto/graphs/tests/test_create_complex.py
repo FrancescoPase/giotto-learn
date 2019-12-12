@@ -19,14 +19,14 @@ cd = cc.create_complex_from_graph()
 def test_graph_input_with_data_type():
 
     with pytest.raises(ValueError):
-        cc_ = CreateCliqueComplex(
+        CreateCliqueComplex(
             graph=nx.barbell_graph(10, 10), data_type='cloud')
 
 
 def test_data_input_with__graph_data_type():
 
     with pytest.raises(ValueError):
-        cc_ = CreateCliqueComplex(data=X, alpha=alpha)
+        CreateCliqueComplex(data=X, alpha=alpha)
 
 
 def test_input_distance_matrix():

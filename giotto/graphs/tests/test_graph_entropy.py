@@ -21,6 +21,6 @@ def test_graph_entropy_fitted():
     entropy = GraphEntropy()
 
     with pytest.raises(NotFittedError):
-        embs = entropy.transform(heat_vectors)
+        entropy.transform(heat_vectors)
 
 
